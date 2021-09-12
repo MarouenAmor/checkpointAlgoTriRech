@@ -1,0 +1,15 @@
+ALGORITHM tri_par_insertion
+VAR
+t:ARRAY_OF INTEGER[50];
+i,j,val:INTEGER;
+BEGIN
+FOR i FROM 0 TO t.length-1  STEP 1  DO
+val:=t[i];
+j:=i-1;
+WHILE ((j>=0)&&(t[j]>val)) DO
+t[j+1]:=t[j];
+j:=j-1;
+END_WHILE
+t[j+1]:=val;
+END_FOR
+END
